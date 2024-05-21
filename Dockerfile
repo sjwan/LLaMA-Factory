@@ -1,7 +1,7 @@
 FROM nvidia/cuda:12.2.2-devel-ubuntu22.04 AS dev
 
 RUN apt-get update -y \
-    && apt-get install -y python3-pip git
+    && apt-get install -y python3-pip git vim  curl iputils-ping
 
 # Workaround for https://github.com/openai/triton/issues/2507 and
 # https://github.com/pytorch/pytorch/issues/107960 -- hopefully
